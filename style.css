@@ -332,7 +332,7 @@ img {
 }
 .offer__text {
   max-width: 65rem;
-  display:flex;
+  display: flex;
   flex-direction: column;
   gap: 2rem;
 }
@@ -353,14 +353,21 @@ img {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.offer__price h3{
-  
+/* .offer__price h3{
+  color:#E39604;
+  font-size:3.5rem;
+  font-weight:600;
 }
+.offer__price h4{
+  color:var(--primary);
+  font-size:12rem;
+  font-weight:600;
+} */
 
 /* OFFER MOBILE */
 @media screen and (max-width: 500px) {
   .offer__text h2 {
-    font-size:3.7rem;
+    font-size: 3.7rem;
     text-align: center;
   }
   .offer__text ul.dotdot {
@@ -370,8 +377,8 @@ img {
   }
   .offer__text ul.dotdot li a {
     width: 100%;
+  }
 }
-
 @media screen and (max-width: 500px) {
   .banner__text h1 {
     font-size: 4rem;
@@ -403,6 +410,106 @@ img {
     justify-content: center;
   }
 }
+/* HOW MOBILE */
+@media screen and (max-width: 500px) {
+  .how__ate {
+    display: none;
+  }
+  .how__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    margin: 12rem;
+    gap: 1.5rem;
+  }
+}
+/* RECO MOBILE */
+@media screen and (max-width: 500px) {
+  .reco__text h2 {
+    text-align: center;
+  }
+  .reco__text p {
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+/* HOW */
+.how {
+  background: var(--primary);
+}
+.how__wrapper {
+  /* hindi siya nagana ng basta siya lang */
+  display: grid;
+  /* yung numbe rof values na ilalagay dito, nakadepende sa ilang columns ang ilalagay */
+  grid-template-columns: 2fr 2fr;
+  min-height: 500px;
+}
+.how__ate {
+  background-image: url("img/different_img.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+}
+.how__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 75rem;
+  /* makakapagpagitna lang ng width kapag may margin 0 auto */
+  margin: 0 auto;
+}
+.how__text h2 {
+  color: var(--light);
+  font-size: 4rem;
+  font-weight: 600;
+}
+.how__text p {
+  color: var(--light);
+}
+/* RECO */
+.reco {
+  max-width: 500rem;
+  padding: 1.5rem;
+  height: 45vh;
+}
+.reco__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+.reco__text h2 {
+  color: var(--primary);
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--primary);
+  max-width: 500rem;
+  padding: 1.5rem;
+  height: 30vh;
+}
+.footer__text {
+  display: flex;
+  font-size: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 100%;
+  margin: 12rem;
+  gap: 1.5rem;
+}
+
 /* REPEATABLE PATTERNS */
 :root {
   --light: #ffffff;
