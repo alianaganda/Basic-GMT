@@ -125,11 +125,13 @@ img {
 }
 /* HEADER */
 .header {
-  background:transparent;
-  padding:2rem;
+  background: transparent;
+  padding: 2rem;
   position: relative;
   position: fixed;
   width: 100%;
+  /* para naka ultaw, may power to send to front to send to back */
+  z-index:999;
 }
 .header__nav ul.nav {
   display: flex;
@@ -193,9 +195,9 @@ img {
   transition: 0.5s ease;
 }
 /* code for activity hahah yoko n nag-cry */
-.header__nav.open{
-  right:0rem;
-  transition:.5s ease;
+.header__nav.open {
+  right: 0rem;
+  transition: 0.5s ease;
 }
 
 /* HEADER MOBILE */
@@ -213,9 +215,9 @@ img {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition:.5s ease
+    transition: 0.5s ease;
   }
-  
+
   .header__nav ul.nav {
     display: flex;
     flex-direction: column;
@@ -240,17 +242,145 @@ img {
 
 /* BANNER */
 .banner{
-  background-image:url("/img/banner_home_v1.jpg");
-  background-size:cover;
-  height:100vh;
-  background-position:center center;
+  background-image: url("/img/banner_home_v1.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-position: center center;
+  /* para hindi siya nakakawala */
+  position:relative;
+  display:flex;
+  align-items:center;
 }
-
-
-
+.banner__faq {
+  background: var(--light);
+  /* kung gaano kahaba yung text, kasya na */
+  width:fit-content;
+  padding:2.5rem 4rem;
+  border-top-left-radius:4rem;
+  position:absolute;
+  bottom:0;
+  /* dapat sagad */
+  right:0;
+}
+/* arrow spacing */
+.banner__faq a{
+  display:flex;
+  align-items:center;
+  gap:2rem;
+  color:var(--dark);
+  font-size:1.5rem;
+  font-weight:600;
+}
+.banner__faq a:hover{
+  color:var(--primary);
+}
+.banner__faq a i{
+  transition:.5s ease;
+}
+/* kaya i kasi i class sa html */
+.banner__faq a:hover i{
+  /* kasi x-axis */
+  transform:translateX(1rem);
+  transition:.5s ease;
+}
+.banner__text ul.social{
+  display:flex;
+  align-items:center;
+  gap:2rem;
+}
+.banner__text ul.social li a{
+  color:var(--light);
+  font-size:3rem;
+}
+.banner__text{
+  /* para magkasama na yung h1 hanggang paragraph at dun sa pinakababa */
+  max-width:65rem;
+  /* dapat lahat may flex sa gap */
+  display:flex;
+  flex-direction:column;
+  gap:4rem;
+}
+.banner__text h1{
+  font-size:5rem;
+  color:var(--light);
+  font-weight:600;
+  /* adjustment ng h1 */
+}
+.banner__text p{
+  color:var(--light);
+  font-size:2rem;
+}
+.banner__text ul.dutdot{
+  display:flex;
+  gap:3rem;
+}
+@media screen and (max-width:500px){
+  .banner__text h1{
+    font-size:4rem;
+    text-align:center;
+  }
+  .banner__text p{
+    font-size:1.5rem;
+    font-weight:600;
+    text-align:center;
+  }
+  /* alignment na ng dalawang btn sa baba */
+  .banner__text ul.dutdot{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+  }
+  /* nagpantay yung dalawang btn ng haba */
+  .banner__text ul.dutdot li a{
+    width:80%;
+  }
+  .banner__text ul.social{
+    justify-content:center;
+  }
+  .banner__faq{
+    width:100%;
+    border-top-left-radius:0rem;
+  }
+  .banner__faq a{
+    justify-content:center;
+  }
+}
 /* REPEATABLE PATTERNS */
 :root {
   --light: #ffffff;
   --dark: #2b2b2b;
   --primary: #134a8c;
 }
+.btn{
+  /* ayan yung mga css na similar lahat ng btn */
+  /* power to manipulate freely the width and height manually edit */
+  display:inline-block;
+  padding:.5rem 1.5rem;
+  border-radius:5rem;
+  /* may tatlong parameters para ifill out, 1st ay 2nd auy space, which is solid */
+  border:1px solid transparent;
+  transition:.5s ease;
+  /* para palaging nakacenter yung text */
+  text-align:center;
+}
+.btn:hover{
+  /* panglaki ng btn like zooming ng konti */
+  scale:1.1;
+  transition:.5s ease;
+}
+.btn.bg--primary{
+  background:var(--primary);
+  color:var(--light);
+  font-size:1.5rem;
+  font-weight:600;
+}
+.btn.bg--light{
+  background:var(--light);
+  color:var(--primary);
+  font-size:1.5rem;
+  font-weight:600;
+}
+
+
+
+
