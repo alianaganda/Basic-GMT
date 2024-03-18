@@ -316,67 +316,96 @@ img {
 }
 /* OFFER */
 .offer {
-  max-width: 150rem;
-  margin: 0 auto;
-  padding: 1.5rem;
-  height: 100vh;
+  padding: 5rem 0;
+  height: 50vh;
 }
-.offer {
-  background-size: cover;
-  height: 70vh;
-  background-position: center center;
-  /* para hindi siya nakakawala */
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.offer__text {
-  max-width: 65rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.offer__price {
-  text-align: column;
-  width: fit-center;
-  padding: 2.5rem;
-  position: absolute;
-  right: 0;
+.offer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
 }
 .offer__text h2 {
-  font-size: 5rem;
+  font-size: 4rem;
+  font-weight: 700;
   color: var(--primary);
-  font-weight: 600;
+  margin-bottom: 3rem;
 }
 .offer__text p {
-  color: var(--dark);
-  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: justify;
+  max-width: 60rem;
+}
+.offer__price {
+  color: #d79a28;
+  margin-top: 10rem;
+  font-size: 3.5rem;
   font-weight: 600;
 }
-/* .offer__price h3{
-  color:#E39604;
-  font-size:3.5rem;
-  font-weight:600;
+.offer__price h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
 }
-.offer__price h4{
-  color:var(--primary);
-  font-size:12rem;
-  font-weight:600;
-} */
-
+.offer__price__bot {
+  display: flex;
+  color: var(--primary);
+  font-weight: 700;
+}
+.offer__price__bot .offer__cents h4 {
+  font-size: 3rem;
+  color: #d79a28;
+}
+.offer__price__bot h3 {
+  font-size: 18rem;
+  margin-top: -6rem;
+}
 /* OFFER MOBILE */
 @media screen and (max-width: 500px) {
+  .offer {
+    padding: 5rem 0;
+    height: 62vh;
+  }
+  .offer__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10rem;
+  }
   .offer__text h2 {
-    font-size: 3.7rem;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 3rem;
     text-align: center;
   }
-  .offer__text ul.dotdot {
+  .offer__text p {
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-align: justify;
+    max-width: 60rem;
+  }
+  .offer__price {
+    margin-top: -6rem;
+    text-align: center;
+  }
+  .offer__price h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .offer__price__bot {
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    color: var(--primary);
+    font-weight: 700;
   }
-  .offer__text ul.dotdot li a {
-    width: 100%;
+  .offer__price__bot h4 {
+    margin: 0 auto;
+    font-size: 3rem;
+    margin-left: 10rem;
+  }
+  .offer__price__bot h3 {
+    font-size: 18rem;
+    margin-top: -6rem;
   }
 }
 @media screen and (max-width: 500px) {
@@ -412,30 +441,98 @@ img {
 }
 /* HOW MOBILE */
 @media screen and (max-width: 500px) {
+  .how {
+    margin: 0 auto;
+    background: var(--primary);
+    height: 70vh;
+  }
   .how__ate {
     display: none;
   }
   .how__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
+    font-size: 1.5rem;
     margin: 12rem;
-    gap: 1.5rem;
+  }
+  .how__text h2 {
+    text-align: center;
+  }
+  .how__text p {
+  }
+  .how__text a {
+    width: 200%;
   }
 }
 /* RECO MOBILE */
 @media screen and (max-width: 500px) {
-  .reco__text h2 {
-    text-align: center;
+  .recommend {
+    padding: 5rem 0;
+    background: #f0e9da;
+    height: 70vh;
   }
-  .reco__text p {
-    font-weight: 600;
+  .recommend .recommend__wrapper {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+.recommend__wrapper h2 {
+    font-size: rem;
+    font-weight: 700;
     text-align: center;
+    color: var(--primary);
+  }
+  .recommend .recommend__wrapper p {
+    margin-bottom: 3rem;
+  }
+  .recommend .recommend__wrapper ul {
+    display: flex;
+    gap: 2rem;
   }
 }
-
+/* FOOTER MOBILE */
+@media screen and (max-width: 500px) {
+  .footer {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    height: 28rem;
+    background: var(--primary);
+  }
+  .footer__wrapper {
+    display: block;
+    gap: 3rem;
+    margin-top: -2rem;
+  }
+  .footer__text a {
+    color: var(--light);
+    font-size: 1.3rem;
+    margin-bottom: 4rem;
+    padding: 1rem;
+  }
+  .footer__text a:last-child {
+    margin-top: -5rem;
+    height: 3.5rem;
+    width: 22rem;
+  }
+  .footer__text p {
+    display: block;
+    color: var(--light);
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    font-size: 3rem;
+    gap: 4rem;
+  }
+  .social a:first-child {
+    font-size: 3rem;
+    color: var(--light);
+    padding: 0.1rem;
+  }
+}
 /* HOW */
 .how {
   background: var(--primary);
@@ -472,42 +569,77 @@ img {
   color: var(--light);
 }
 /* RECO */
-.reco {
-  max-width: 500rem;
-  padding: 1.5rem;
+.recommend {
+  padding: 5rem 0;
+  background: #f0e9da;
   height: 45vh;
 }
-.reco__text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 75rem;
-  margin: 0 auto;
-}
-.reco__text h2 {
-  color: var(--primary);
-  font-size: 4rem;
+.recommend__wrapper p {
   font-weight: 600;
+}
+.recommend .recommend__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+}
+.recommend .recommend__wrapper h2 {
+  font-size: 5rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 3rem;
+  line-height: 1;
+}
+.recommend .recommend__wrapper p {
+  margin-bottom: 3rem;
+}
+.recommend .recommend__wrapper ul {
+  display: flex;
+  gap: 1.5rem;
 }
 
 /* FOOTER */
 .footer {
-  background: var(--primary);
-  max-width: 500rem;
-  padding: 1.5rem;
-  height: 30vh;
-}
-.footer__text {
   display: flex;
-  font-size: 0.5rem;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  max-width: 100%;
-  margin: 12rem;
-  gap: 1.5rem;
+  height: 28rem;
+  background: var(--primary);
+}
+.footer__wrapper {
+  display: flex;
+  gap: 3rem;
+  margin-top: -2rem;
+}
+.footer__text a {
+  color: var(--light);
+  font-size: 1.3rem;
+  margin-bottom: 4rem;
+  padding: 1rem;
+}
+.footer__text a:last-child {
+  margin-top: -5rem;
+  height: 3.5rem;
+  width: 22rem;
+}
+.footer__text p {
+  color: var(--light);
+  text-align: center;
+  font-size: 1.3rem;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  font-size: 3rem;
+  gap: 4rem;
+}
+.social a:first-child {
+  font-size: 3rem;
+  color: var(--light);
+  padding: 0.1rem;
 }
 
 /* REPEATABLE PATTERNS */
